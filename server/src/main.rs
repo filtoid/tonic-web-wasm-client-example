@@ -10,12 +10,6 @@ mod message_service;
 #[derive(Default)]
 struct ServiceServer {}
 
-impl ServiceServer {
-    pub fn new() -> Self {
-        Self{}
-    }
-}
-
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     SimpleLogger::new()
