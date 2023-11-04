@@ -7,7 +7,7 @@ use crate::message_grpc::*;
 #[tonic::async_trait]
 impl MessageService for ServiceServer {
     async fn get_message(&self, _req: Request<GetMessageRequest>) -> Result<Response<GetMessageResponse>, Status> {
-
+        
         Ok(Response::new(GetMessageResponse{
             status: "ok".to_string(),
             error: "".to_string(),
